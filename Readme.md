@@ -74,3 +74,4 @@ While building, you'll understand:
 - I used Spring Data JPA for database operations, which automatically generates SQL queries from repository methods.
 - asdfgh sdfgh
 - The database schema is managed by Hibernate with auto-update enabled for development."
+  --jk
