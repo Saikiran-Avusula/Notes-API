@@ -81,13 +81,10 @@ public class AuthService {
 //        Get user from database
             User userFromDB = userRepository.findByEmail(loginRequest.getEmail()).orElseThrow(() -> new RuntimeException("User not found"));
 
-            log.info("Logged userEmail: {}", userFromDB.getEmail());
-            log.info("Logged userPassword: {}", userFromDB.getPassword());
-
 
 //        Generate JWT token
             String loginGeneratedToken = jwtUtil.generateToken(userFromDB.getEmail());
-            log.info("Login Generated Token: {}", loginGeneratedToken);
+
 
             AuthResponse loginAuthResponseLogin = new AuthResponse(loginGeneratedToken, userFromDB.getId(), userFromDB.getName(), userFromDB.getEmail());
             log.info("Login auth response: {}", loginAuthResponseLogin);

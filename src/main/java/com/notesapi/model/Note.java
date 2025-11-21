@@ -11,8 +11,6 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "notes")
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class Note {
 
     @Id
@@ -49,6 +47,17 @@ public class Note {
         updatedAt = LocalDateTime.now();
     }
 
+    public Note(Long id, String title, String content, LocalDateTime createdAt, LocalDateTime updatedAt, User user) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+        this.user = user;
+    }
+
+    public Note() {
+    }
 
     public String getTitle() {
         return title;
