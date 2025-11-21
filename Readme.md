@@ -172,8 +172,8 @@ To mitigate this risk:
 ### Q8: Can you unhash a BCrypt password?
 - "No. BCrypt is a one-way hashing algorithm. You cannot reverse it. The only way to verify a password is to hash the input and compare it with the stored hash using the matches() method."
 
-Summary
-## What you do in Postman:
+## Summary
+### What you do in Postman:
 
 - Register: Send plain text password → Backend hashes it → Stores hash in DB
 - Login: Send SAME plain text password → Backend compares with stored hash → Success
