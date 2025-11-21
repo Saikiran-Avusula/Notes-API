@@ -194,4 +194,5 @@ http://localhost:8080/api/auth/register
 "email": "testuser1@gmail.com",
 "password": "password1"
 }
-[//]: # (------)
+
+
