@@ -173,26 +173,30 @@ To mitigate this risk:
 - "No. BCrypt is a one-way hashing algorithm. You cannot reverse it. The only way to verify a password is to hash the input and compare it with the stored hash using the matches() method."
 
 Summary
-What you do in Postman:
+## What you do in Postman:
 
-Register: Send plain text password → Backend hashes it → Stores hash in DB
-Login: Send SAME plain text password → Backend compares with stored hash → Success
+- Register: Send plain text password → Backend hashes it → Stores hash in DB
+- Login: Send SAME plain text password → Backend compares with stored hash → Success
 
-You NEVER send the hashed password in requests.
+### You NEVER send the hashed password in requests.
 
 [//]: # (------)
 Use POST method
 http://localhost:8080/api/auth/login :
+`
 {
 "email": "testuser1@gmail.com",
 "password": "password1"
 }
+`
 
 http://localhost:8080/api/auth/register
+`
 {
 "name": "testuser1",
 "email": "testuser1@gmail.com",
 "password": "password1"
 }
+`
 
 
