@@ -199,4 +199,12 @@ http://localhost:8080/api/auth/register
 }
 `
 
-
+Day 3 Checklist
+✅ Note DTOs created
+✅ Note service with CRUD operations
+✅ Authorization (users only access their own notes)
+✅ Note controller with all endpoints
+✅ Tested create/read/update/delete in Postman
+✅ Tested with JWT authentication
+✅ Tested user isolation (user1 can't see user2's notes)
+✅ Code pushed to GitHub
