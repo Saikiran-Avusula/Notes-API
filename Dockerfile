@@ -1,18 +1,12 @@
 # Step 1: Build the Spring Boot app
-FROM eclipse-temurin:17-jdk-jammy AS build
+FROM maven:3.9.6-eclipse-temurin-17 AS build
 
 WORKDIR /app
 
 COPY . .
 
-# FIX 1: normalize line endings (important if on Windows)
-RUN sed -i 's/\r$//' mvnw
-
-# FIX 2: make mvnw executable
-RUN chmod +x mvnw
-
-# Now run the wrapper safely
-RUN ./mvnw clean package -Dmaven.test.skip=true
+# Skip tests to speed up build and avoid environment issues
+RUN mvn clean package -Dmaven.test.skip=true
 
 
 # Step 2: Run the built JAR
