@@ -213,7 +213,7 @@ Day 3 Checklist
 
 ### Why Docker?
 We use Docker to run PostgreSQL locally because **Render (our deployment platform) uses PostgreSQL**.
-Using Docker ensures our local environment matches production exactly. If we used MySQL locally and Postgres in production, we might face SQL syntax errors or compatibility issues during deployment. Docker gives us a "production-like" database instantly without installing Postgres manually on Windows.
+Using Docker ensures our local environment matches the production exactly. If we used MySQL locally and Postgres in production, we might face SQL syntax errors or compatibility issues during deployment. Docker gives us a "production-like" database instantly without installing Postgres manually on Windows.
 
 ### Step 1: Start the Database
 Before running the backend, start the database container:
